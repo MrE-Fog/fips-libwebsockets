@@ -6,7 +6,7 @@
 	#endif
 #endif
 
-#define LWS_INSTALL_DATADIR "c:/proj/realms/client/libs/libwebsockets/bin/share"
+#define LWS_INSTALL_DATADIR "/"
 
 /* Define to 1 to use wolfSSL/CyaSSL as a replacement for OpenSSL.
  * LWS_OPENSSL_SUPPORT needs to be set also for this to work. */
@@ -19,22 +19,23 @@
 
 /* #undef LWS_WITH_MBEDTLS */
 /* #undef LWS_WITH_POLARSSL */
+/* #undef LWS_WITH_ESP8266 */
 /* #undef LWS_WITH_ESP32 */
 
 /* #undef LWS_WITH_PLUGINS */
 /* #undef LWS_WITH_NO_LOGS */
 
 /* The Libwebsocket version */
-#define LWS_LIBRARY_VERSION "2.4.0"
+#define LWS_LIBRARY_VERSION "2.4.2"
 
 #define LWS_LIBRARY_VERSION_MAJOR 2
 #define LWS_LIBRARY_VERSION_MINOR 4
-#define LWS_LIBRARY_VERSION_PATCH 0
+#define LWS_LIBRARY_VERSION_PATCH 2
 /* LWS_LIBRARY_VERSION_NUMBER looks like 1005001 for e.g. version 1.5.1 */
 #define LWS_LIBRARY_VERSION_NUMBER (LWS_LIBRARY_VERSION_MAJOR*1000000)+(LWS_LIBRARY_VERSION_MINOR*1000)+LWS_LIBRARY_VERSION_PATCH
 
 /* The current git commit hash that we're building from */
-#define LWS_BUILD_HASH "v2.0.0-754-ga663aefe"
+#define LWS_BUILD_HASH "@DESKTOP-CUNR87R-v2.0.0-649-gc772c3f7"
 
 /* Build with OpenSSL support */
 /* #undef LWS_OPENSSL_SUPPORT */
@@ -46,7 +47,7 @@
 #define LWS_OPENSSL_CLIENT_CERTS "../share"
 
 /* Turn off websocket extensions */
-#define LWS_NO_EXTENSIONS
+/* #undef LWS_NO_EXTENSIONS */
 
 /* Enable libev io loop */
 /* #undef LWS_WITH_LIBEV */
@@ -92,8 +93,6 @@
 /* #undef LWS_HAVE_SSL_CTX_set1_param */
 /* #undef LWS_HAVE_X509_VERIFY_PARAM_set1_host */
 /* #undef LWS_HAVE_RSA_SET0_KEY */
-/* #undef LWS_HAVE_X509_get_key_usage */
-/* #undef LWS_HAVE_SSL_CTX_get0_certificate */
 
 /* #undef LWS_HAVE_UV_VERSION_H */
 
@@ -107,7 +106,7 @@
 /* #undef LWS_WITH_HTTP_PROXY */
 
 /* HTTP Ranges support */
-/* #undef LWS_WITH_RANGES */
+#define LWS_WITH_RANGES
 
 /* Http access log support */
 /* #undef LWS_WITH_ACCESS_LOG */
@@ -129,7 +128,7 @@
 /* #undef LWS_PLAT_OPTEE */
 
 /* ZIP FOPS */
-/* #undef LWS_WITH_ZIP_FOPS */
+#define LWS_WITH_ZIP_FOPS
 #define LWS_HAVE_STDINT_H
 
 /* #undef LWS_AVOID_SIGPIPE_IGN */
@@ -146,18 +145,11 @@
 #define LWS_HAVE__ATOI64
 #define LWS_HAVE__STAT32I64
 
-/* #undef LWS_WITH_JWS */
-/* #undef LWS_WITH_ACME */
-/* #undef LWS_WITH_SELFTESTS */
-
-#define LWS_HAVE_MALLOC_H
-
 /* OpenSSL various APIs */
 
 /* #undef LWS_HAVE_TLS_CLIENT_METHOD */
 /* #undef LWS_HAVE_TLSV1_2_CLIENT_METHOD */
 /* #undef LWS_HAVE_SSL_SET_INFO_CALLBACK */
-/* #undef LWS_HAVE_SSL_EXTRA_CHAIN_CERTS */
 
 #define LWS_HAS_INTPTR_T
 
