@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 
 option(LWS_WITH_SSL "" OFF)
-fips_add_subdirectory(libwebsockets)
+add_subdirectory(libwebsockets)
 
 #fips_begin_lib(libwebsockets)
 #    fips_dir(libwebsockets/lib)

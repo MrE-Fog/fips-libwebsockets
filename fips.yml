@@ -5,3 +5,5 @@
 exports:
     header-dirs:
         - include
+    modules:
+        libwebsockets: .
