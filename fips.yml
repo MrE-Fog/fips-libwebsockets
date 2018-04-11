@@ -2,6 +2,10 @@
 # fips-libwebsockets
 #
 ---
+
+imports:
+    zlib: https://github.com/floooh/fips-zlib.git
+
 exports:
     header-dirs:
         - include
