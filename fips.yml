@@ -4,7 +4,8 @@
 ---
 
 imports:
-    zlib: https://github.com/floooh/fips-zlib.git
+    zlib: 
+        git: https://github.com/floooh/fips-zlib.git
 
 exports:
     header-dirs:
