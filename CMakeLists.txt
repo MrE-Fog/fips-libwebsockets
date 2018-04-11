@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.8.9)
 
+
+
 fips_begin_lib(libwebsockets)
+    include_directories(include)
     fips_dir(libwebsockets/lib)
     fips_files(
 	misc/base64-decode.c
