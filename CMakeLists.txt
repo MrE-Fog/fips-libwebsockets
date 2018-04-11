@@ -4,6 +4,7 @@ option(LWS_WITH_SSL "" OFF)
 option(LWS_WITHOUT_TESTAPPS "" ON)
 option(LWS_WITH_SHARED "" OFF)
 add_subdirectory(libwebsockets)
+target_include_directories(libwebsockets PUBLIC libwebsockets/include)
 
 #fips_begin_lib(libwebsockets)
 #    fips_dir(libwebsockets/lib)
