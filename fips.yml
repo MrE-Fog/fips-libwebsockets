@@ -3,9 +3,9 @@
 #
 ---
 
-imports:
-    fips-zlib: 
-        git: https://github.com/floooh/fips-zlib.git
+#imports:
+#    fips-zlib: 
+#        git: https://github.com/floooh/fips-zlib.git
 
 exports:
     header-dirs:
