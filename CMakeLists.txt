@@ -20,4 +20,4 @@ fips_begin_lib(libwebsockets)
     server/server.c
 	server/lws-spa.c
 	server/server-handshake.c)
-#fips_end_lib()
+fips_end_lib()
